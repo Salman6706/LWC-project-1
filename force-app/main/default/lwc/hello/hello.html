@@ -1,0 +1,31 @@
+<template>
+    <lightning-layout class="id">
+       <div class="id">
+           {msg1},{msg2}
+
+           <lightning-button variant="success" label="click"  onclick={handleClick} ></lightning-button>
+           <lightning-input type="checkbox" label="click" onchange={changevalue}></lightning-input>
+       </div>
+       
+       
+
+    </lightning-layout>
+    <template if:true={visibility}>
+        <p>Yes ! you have clicked me....</p>
+      </template>
+
+
+      <div class="col">
+        <lightning-input type="number" label="Number 1" name="num11" onchange={sum1}></lightning-input>
+        
+        <lightning-input type="number" label="Number 1" name="num2" onchange={sum2}></lightning-input> 
+        
+        <lightning-button label="Sum" onclick={calculate}></lightning-button>
+       
+        <lightning-input label="Result" name="result" read-only="true"  value={result}  ></lightning-input>
+
+      </div>
+ 
+</template>
+
+
